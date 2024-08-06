@@ -1,7 +1,9 @@
-// deleted all imports as well
+import Header from './Header.jsx'
 
 function App() {
-  // deleted everything here
+  return(
+      <Header></Header>
+  );
 }
 
 export default App
