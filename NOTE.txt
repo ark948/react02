@@ -27,6 +27,7 @@ base commit.
 - props
 - prop types
 - conditional rendering
+- lists
 
 components can have dedicated style sheets.
 App.css was deleted. no longer needed.
