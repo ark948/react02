@@ -1,0 +1,78 @@
+> npm create vite@latest
+- provide project name
+- select javascript
+> cd project folder
+> npm install
+> npm run dev
+
+node_modules: external packages and libraries that project relies on
+public: contains public assets such as images
+src: -> assets folder is similar to public folder, but files inside it are bundled to final output
+src itself: main.jsx -> js + xml
+App.jsx -> root component
+
+index.html -> main entry point to program
+package.json file -> contains metadata for our project
+
+
+App.jsx contains the root component, that main.jsx will use, so the App function inside App.jsx must not be deleted.
+but everything inside App function can be deleted (and i did).
+also all imports in App.jsx deleted.
+base commit.
+
+- project setup
+- project structure
+- root component
+- styles
+- props
+- prop types
+- conditional rendering
+
+components can have dedicated style sheets.
+App.css was deleted. no longer needed.
+Header.jsx in src is a new component, in form of a function and it must be exported.
+
+index.css applies some very basic styling to all jsx files.
+to start from scracth, all these styles inside index.css can be deleted.
+
+
+root element (App.jsx) must only return one parent element.
+in fact, all react components must return only one parent.
+this can be workarounded, using the fragment element, which is just a empty opening and closing html tag. (<>)
+
+if putting js code inside return statement of jsx file, curly brackets are needed.
+but outside return statement, no need for them.
+
+
+section 2 of the video (channel name: Bro Code)
+delete everything in root component, Header and Footer and Food, App.css, all imports in App.jsx
+i'm just gonna delete the root component, not the other files.
+
+
+in react, class is reserved, so we can't use it regularly with html attributes.
+instread use className
+
+
+deleted everything inside index.css to start fresh.
+
+index.css can access all jsx files in src folder. (but this can get very large)
+so we can create dedicated style sheets for each component.
+react can create unique classNames for us. (commit: unique hash for className)
+
+moving button back to src and deleting Button folder.
+we can also use inline styling (only useful for small components like isolated and minimal styling)
+
+
+using props we can send data to child components
+boolean values are not directly displayed in dom (using props), using ternary operator usually fixes this.
+
+propTypes: a mechanism that ensures a passed value is of correct datatype.
+using propTypes is recommended.
+while passing properties, any type other than string requires curly brackets.
+
+defaultProps: default values for props if they are not passed by parent.
+according to a warning in console, use of defaultProps will be deprecated and instead must use javascript parameters.
+
+conditional rendering: allows us to control what gets rendered in app based on certain condition (show, hide or change component).
+we can use both if else and ternary operator for this.
+(do not display username if user is not logged in, despite having a username)
