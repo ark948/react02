@@ -31,6 +31,7 @@ base commit.
 - click events (events in general)
 - hooks
 - onChange event handler
+- updater function
 
 
 components can have dedicated style sheets.
@@ -99,3 +100,8 @@ if using javascript inside style attribute of html element in jsx file,
 must use object inside curly brackets. example:
 <div className="color-display" style={{backgroundColor: color}}>
 (color is a variable)
+
+2.23.30
+upadater function: a function passed to setState (usually)
+allows for safe updates based on previous state.
+typically used with async programming and multiple state functions
