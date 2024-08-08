@@ -28,6 +28,7 @@ base commit.
 - prop types
 - conditional rendering
 - lists
+- click events (events in general)
 
 components can have dedicated style sheets.
 App.css was deleted. no longer needed.
@@ -77,3 +78,5 @@ according to a warning in console, use of defaultProps will be deprecated and in
 conditional rendering: allows us to control what gets rendered in app based on certain condition (show, hide or change component).
 we can use both if else and ternary operator for this.
 (do not display username if user is not logged in, despite having a username)
+
+if your event handler has argument, do not pass it in element onclick event, instead use a arrow functions.
