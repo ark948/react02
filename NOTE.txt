@@ -92,3 +92,10 @@ useState is hook function that allows for creation of stateful variables and a s
 
 
 onChange event: triggers a function every time the value of input changes
+
+
+colorPicker program: 2:13:20
+if using javascript inside style attribute of html element in jsx file,
+must use object inside curly brackets. example:
+<div className="color-display" style={{backgroundColor: color}}>
+(color is a variable)
