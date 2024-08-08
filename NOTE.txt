@@ -30,6 +30,7 @@ base commit.
 - lists
 - click events (events in general)
 - hooks
+- onChange event handler
 
 
 components can have dedicated style sheets.
@@ -88,3 +89,6 @@ React hook: special function that allows components to use react features withou
 (useState, useEffect, and more)
 
 useState is hook function that allows for creation of stateful variables and a setter function to update its value
+
+
+onChange event: triggers a function every time the value of input changes
