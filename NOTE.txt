@@ -29,6 +29,8 @@ base commit.
 - conditional rendering
 - lists
 - click events (events in general)
+- hooks
+
 
 components can have dedicated style sheets.
 App.css was deleted. no longer needed.
@@ -80,3 +82,9 @@ we can use both if else and ternary operator for this.
 (do not display username if user is not logged in, despite having a username)
 
 if your event handler has argument, do not pass it in element onclick event, instead use a arrow functions.
+
+
+React hook: special function that allows components to use react features without writing class components. (react v16.8)
+(useState, useEffect, and more)
+
+useState is hook function that allows for creation of stateful variables and a setter function to update its value
