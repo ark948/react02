@@ -35,6 +35,7 @@ base commit.
 - updating the state of objects
 - updating the state of arrays
 - updating the state of an array of objects
+- To-do list project
 
 
 components can have dedicated style sheets.
