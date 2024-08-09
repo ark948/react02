@@ -2,34 +2,33 @@ import {useState, useEffect} from 'react';
 
 function MyComponent() {
 
-    const [count, setCount] = useState(0);
-    const [color, setColor] = useState("green");
+    const [width, setWidth] = useState(window.innerWidth);
+    const [height, setHeight] = useState(window.innerHeight);
 
     useEffect(() => {
-        document.title = `Count ${count} ${color}`;
+        window.addEventListener("resize", handleResize);
+        console.log("Event Listener added.");
 
+        // cleanup code for unmounting and free up resources
         return () => {
-            // cleanup code
-            // e.g. removing event listener before unmounting an element
+            window.removeEventListener("resize", handleResize);
+            console.log("Event listener removed.");
         }
-    }, [count, color]); // when component mounts + when this value changes, run the code
+    }, []); // run only once when mounted
 
-    function addCount() {
-        setCount(c => c + 1);
-    }
-    function subtractCount() {
-        setCount(c => c - 1);
-    }
-    function changeColor() {
-        setColor(c => c === "green" ? "red" : "green");
+    useEffect(() => {
+        document.title = `Size: ${width} x ${height}`;
+    }, [width, height]); // run every time these values change
+    
+    function handleResize() {
+        setWidth(window.innerWidth);
+        setHeight(window.innerHeight);
     }
 
     return(
         <>
-        <p style={{color: color}}>Count: {count}</p>
-        <button onClick={addCount}>Add</button>
-        <button onClick={subtractCount}>Subtract</button><br/>
-        <button onClick={changeColor}>Change Color</button>
+        <p>Window Width: {width}px</p>
+        <p>Window height: {height}px</p>
         </>
     );
 }
