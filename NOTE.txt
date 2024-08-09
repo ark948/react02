@@ -36,6 +36,7 @@ base commit.
 - updating the state of arrays
 - updating the state of an array of objects
 - To-do list project
+- useEffect react hook
 
 
 components can have dedicated style sheets.
@@ -115,4 +116,14 @@ instead of changing the state entirely, we will use an updater
         // it will make a reference to previous state of object and ...
         // safely update it
 
-2.54
+
+useEffect is react hook that invokes, when:
+        a component is re-rendered,
+        a commit is mounted (created and appended to DOM),
+        the state of a component or variable changes
+some uses of useEffect:
+        useEffect(() => {}) // run after every rerender
+        useEffect(() => {}, []) // runs only on mount
+        useEffect(() => {}, [value]) // runs on mount + when value changes
+note: adding at least one dependancy is recommended.
+also useEffect allows for the use of clean up code
