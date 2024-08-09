@@ -34,6 +34,7 @@ base commit.
 - updater function
 - updating the state of objects
 - updating the state of arrays
+- updating the state of an array of objects
 
 
 components can have dedicated style sheets.
@@ -113,3 +114,4 @@ instead of changing the state entirely, we will use an updater
         // it will make a reference to previous state of object and ...
         // safely update it
 
+2.54
