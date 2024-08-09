@@ -33,6 +33,7 @@ base commit.
 - onChange event handler
 - updater function
 - updating the state of objects
+- updating the state of arrays
 
 
 components can have dedicated style sheets.
