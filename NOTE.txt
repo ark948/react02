@@ -32,6 +32,7 @@ base commit.
 - hooks
 - onChange event handler
 - updater function
+- updating the state of objects
 
 
 components can have dedicated style sheets.
@@ -105,3 +106,9 @@ must use object inside curly brackets. example:
 upadater function: a function passed to setState (usually)
 allows for safe updates based on previous state.
 typically used with async programming and multiple state functions
+2.30.46
+
+instead of changing the state entirely, we will use an updater
+        // it will make a reference to previous state of object and ...
+        // safely update it
+
