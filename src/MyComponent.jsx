@@ -1,4 +1,4 @@
-import {isValidElement, useState} from 'react';
+import {useState} from 'react';
 
 function MyComponent() {
 
