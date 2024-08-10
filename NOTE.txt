@@ -39,6 +39,7 @@ base commit.
 - useEffect react hook
 - digital clock
 - useContext
+- useRef
 
 
 components can have dedicated style sheets.
@@ -147,4 +148,7 @@ step:
 2. delcare the provided value using useContext
 ComponentA is provider, ComponentD is consumer
 ? Now, does ComponentB have access to conext as well? i don't know.
-4.11
+
+
+useRef: use reference, allows for a component to remember some information, without triggering new render
+useRef is similar to useState, but will trigger re-render upon value change
