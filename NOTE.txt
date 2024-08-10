@@ -38,6 +38,7 @@ base commit.
 - To-do list project
 - useEffect react hook
 - digital clock
+- useContext
 
 
 components can have dedicated style sheets.
@@ -130,3 +131,20 @@ note: adding at least one dependancy is recommended.
 also useEffect allows for the use of clean up code
 
 REMEMBER: to always add cleanup function in useEffect
+
+useContext: a hook that allows for sharing values between components without passing props
+we will create four components, A through D, A will include B, B include C, and C include D.
+passing props to nested components is called Prop Drilling (which is not recommended).
+there is a better solution, which is useContext hook.
+step:
+(these 3 steps will make the Provider Component)
+1. import createContext
+2. export context
+3. wrap child component within provider componento
+
+(now, these 2 steps will be the Consumer Component)
+1. import useContext hook and import the exported context from provider
+2. delcare the provided value using useContext
+ComponentA is provider, ComponentD is consumer
+? Now, does ComponentB have access to conext as well? i don't know.
+4.11
