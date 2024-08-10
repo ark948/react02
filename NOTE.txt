@@ -37,6 +37,7 @@ base commit.
 - updating the state of an array of objects
 - To-do list project
 - useEffect react hook
+- digital clock
 
 
 components can have dedicated style sheets.
@@ -110,7 +111,7 @@ must use object inside curly brackets. example:
 upadater function: a function passed to setState (usually)
 allows for safe updates based on previous state.
 typically used with async programming and multiple state functions
-2.30.46
+
 
 instead of changing the state entirely, we will use an updater
         // it will make a reference to previous state of object and ...
@@ -127,3 +128,5 @@ some uses of useEffect:
         useEffect(() => {}, [value]) // runs on mount + when value changes
 note: adding at least one dependancy is recommended.
 also useEffect allows for the use of clean up code
+
+REMEMBER: to always add cleanup function in useEffect
